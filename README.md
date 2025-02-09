@@ -5,7 +5,8 @@ LeetCode Solution Viewer is a simple web app that helps you view and organize yo
 <br>
 Features:<br>
 1) Syntax Highlighting: Code is displayed with proper formatting.<br>
-2) Light/Dark Mode: Switch between light and dark themes.<br>
-3) Responsive Design: Works well on all screen sizes.<br>
-4) Scrollable Code Blocks: Large solutions stay compact with internal scrolling.<br>
-5) Copy Button: Copy code with one click.<br>
+2) Search History: Keep track of past searches.<br>
+3) Light/Dark Mode: Switch between light and dark themes.<br>
+4) Responsive Design: Works well on all screen sizes.<br>
+5) Scrollable Code Blocks: Large solutions stay compact with internal scrolling.<br>
+6) Copy Button: Copy code with one click.<br>
