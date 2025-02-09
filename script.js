@@ -28,7 +28,7 @@ async function find_path(problem_name){
     if(matchingFiles.length === 0){
         console.warn("No matching files found.");
         document.querySelector(".solution").innerHTML= "";
-        document.querySelector(".error-alert").innerHTML= `<p>No solutions found for "${searchInfo.value}".</p>`;
+        document.querySelector(".error-alert").innerHTML= `<p>No solutions found for "${searchInfo.value}" in selected language.</p>`;
         let scrollToTop=document.querySelector(".header-content");
         scrollToTop.scrollIntoView({behavior:"smooth",block:"nearest"});
         document.querySelector(".solution-container-features").style.display= "none";
