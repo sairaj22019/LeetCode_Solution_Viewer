@@ -1,7 +1,6 @@
 const URL = "https://api.github.com/repos/haoel/leetcode/git/trees/master?recursive=1";
 
 // token generation for more requests
-const token="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"  
 
 let searchInfo=document.getElementById("search-text");
 let button=document.getElementById("search-button");
@@ -11,14 +10,9 @@ const languageToggleBtn = document.getElementById("language-toggle-btn");
 
 document.querySelector(".solution-container-features").style.display="none";
 
-async function find_path(problem_name){
-  const response=await fetch(URL, {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/vnd.github.v3+json'
-        }
-    });
+async function find_path(problem_name) {
+    const response = await fetch(URL);
+    
 
     const data = await response.json();
 
@@ -278,6 +272,7 @@ function displaySearchHistory(){
         searchHistoryContainer.appendChild(clearBtn);
     }
 }
+
 
 
 
