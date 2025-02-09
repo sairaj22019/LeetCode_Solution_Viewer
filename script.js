@@ -1,7 +1,7 @@
 const URL = "https://api.github.com/repos/haoel/leetcode/git/trees/master?recursive=1";
 
 // token generation for more requests
-const token="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"  
+const token="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"  
 
 let searchInfo=document.getElementById("search-text");
 let button=document.getElementById("search-button");
