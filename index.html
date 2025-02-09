@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="html-class">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LeetCode solutions</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Highlight.js Stylesheet and Script -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body > 
+    <div class="header">
+        <header class="header-content">
+            <div class="logo">
+                <i class="fa-solid fa-pen-to-square" id="logo"></i>
+
+                <span class="logo-text">LeetCode Solutions</span>
+            </div>
+            <div class="nav-container">
+                <nav class="nav-bar">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">Features</a>
+                    <a href="https://leetcode.com/" class="nav-link">LeetCode</a>
+                    <a href="#home" class="nav-link">About</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="content">
+        <section class="main-section">
+            <div class="content-left">
+                <p class="section-label">Excited to present</p>
+                <h1 class="section-title">Effortless LeetCode Solutions for Every Coder</h1>
+                <p class="section-desc">Our platform simplifies your coding journey by providing easy access to
+                     optimized solutions for LeetCode problems. Search by problem name or number, explore solutions
+                      in multiple languages, and enhance your coding skills with a seamless learning experience.</p>
+                <div class="Button-group">
+                    <input type="text" class="start_button" id="search-text" placeholder="Enter ID or name (e.g., 1 or Two Sum)..."> 
+
+                    <select name="language-select" id="select-language" required>
+                        <option value="place-holder" selected disabled>select language</option>
+                        <option value=".cpp" class="option-item">C++</option>
+                        <option value=".py" class="option-item">Python</option>
+                        <option value=".java" class="option-item">Java</option>
+                    </select>
+
+                    <button id="search-button">
+                        <i class="fa-solid fa-magnifying-glass" id="search-logo"></i>
+                    </button>
+                </div> 
+                
+                <div class="error-alert">
+                    
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="image-container">
+                    <img src="hero img.png" alt="IMAGE" class="section-image">
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="solution-section">
+        <div class="search-history light-theme">
+        
+        </div>
+        <div class="solution-container light-theme">
+            <div class="solution-container-features">
+                <div class="solution-container-features-title">
+    
+                </div>
+                <div class="solution-container-features-options">
+                    <div class="dropdown">
+                        <button id="language-toggle-btn">C++</button>
+                        <div class="dropdown-content">
+                            <p data-lang=".cpp">C++</p>
+                            <p data-lang=".py">Python</p>
+                            <p data-lang=".java">Java</p>
+                        </div>
+                    </div>
+                    <button id="mode" >
+                        <i class="fa-solid fa-circle-half-stroke change-theme-button" ></i>
+                    </button>
+                    <button id="copy-button">
+                        <i class="fa-solid fa-copy copy-button-logo" ></i>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="solution" id="appear_on_top" >
+    
+            </div>
+            
+        </div>
+    </section>
+    <div class="footer-container">
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="company-logo">
+                    <a href="#" class="logo-link">
+                        <i class="fa-solid fa-pen-to-square" id="logo"></i>
+                        <p >LeetCode Solutions</p>
+                    </a>
+                    <p class="filler-text">
+                        Effortless LeetCode Solutions for Every Coder
+                    </p>
+                    <div class="social">
+                        <a href="#insta" class="social-link">
+                            <img src="instagram.svg" class="social-icon">
+                        </a>
+                        <a href="#twitter" class="social-link">
+                            <img src="twitter.svg" class="social-icon">
+                        </a>
+                        <a href="#linkedin" class="social-link">
+                            <img src="linkedin-copy.svg" class="social-icon">
+                        </a>
+                        <a href="#github" class="social-link">
+                            <img src="github.svg" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <!-- column1 -->
+                <div class="footer-grid-column">
+                    <div class="footer-grid-heading">
+                        Connect
+                    </div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">
+                            AboutUs
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Overview
+                        </a></li>
+                        <li><a href="#" class="footer-link">
+                            Resources
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Community
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- column2 -->
+                <div class="footer-grid-column">
+                    <div class="footer-grid-heading">
+                        Explore
+                    </div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">
+                            Browse Problems
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Solution Languages
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Contribute
+                        </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- column3 -->
+                <div class="footer-grid-column">
+                    <div class="footer-grid-heading">
+                        Support
+                    </div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">
+                            Contact
+                        </a></li>
+                        <li><a href="#" class="footer-link">
+                            Documentation
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Chat
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            FAQ
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- column4 -->
+                <div class="footer-grid-column">
+                    <div class="footer-grid-heading">
+                        Legal
+                    </div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">
+                            Terms of Service
+                        </a></li>
+                        <li><a href="#" class="footer-link">
+                            Privacy Policy
+                        </a>
+                        </li>
+                        <li><a href="#" class="footer-link">
+                            Cookie settings
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+        
+        <div class="copy-right">
+            &copy; 2025 -Present LeetCode Solutions. All rights reserved.
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
