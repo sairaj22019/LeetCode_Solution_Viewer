@@ -1,7 +1,7 @@
 const URL = "https://api.github.com/repos/haoel/leetcode/git/trees/master?recursive=1";
 
 // token generation for more requests
-const token="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"  
+const token="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"  
 
 let searchInfo=document.getElementById("search-text");
 let button=document.getElementById("search-button");
@@ -11,13 +11,14 @@ const languageToggleBtn = document.getElementById("language-toggle-btn");
 
 document.querySelector(".solution-container-features").style.display="none";
 
-async function find_path(problem_name) {
-    const response = await fetch(URL,{
+async function find_path(problem_name){
+  const response=await fetch(URL, {
         method: 'GET',
         headers: {
-            'Authorization': `token ${token}`
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
         }
-    }); 
+    });
 
     const data = await response.json();
 
