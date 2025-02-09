@@ -10,22 +10,17 @@ const languageToggleBtn = document.getElementById("language-toggle-btn");
 
 document.querySelector(".solution-container-features").style.display="none";
 
-async function find_path(problem_name) {
-    const response = await fetch(URL);
+async function find_path(problem_name){
+    const response=await fetch(URL);
+    const data=await response.json();
     
-
-    const data = await response.json();
-
     if (!data||!data.tree){
         console.error("Invalid response structure:", data);
         document.querySelector(".solution").innerHTML= "<p>No valid data returned from API.</p>";
         return;
     }
-    
     // removing all spaces,underscores and hypens from entered input 
     const formattedProblemName=problem_name.toLowerCase().replace(/[\s-_]+/g, "");
-
-    
     const matchingFiles=data.tree.filter(file =>{
         const fileName=file.path.toLowerCase();
         return fileName.includes(formattedProblemName);
@@ -46,9 +41,8 @@ async function find_path(problem_name) {
         matchingFiles.forEach(file => fetchSolutionCode(file.path));
     }
 }
-
 // function to fetch filepath
-async function fetchSolutionCode(filePath) {
+async function fetchSolutionCode(filePath){
     const filePathUrl= `https://raw.githubusercontent.com/haoel/leetcode/master/${filePath}`;
     const response= await fetch(filePathUrl);  
     const code=await response.text();
@@ -63,12 +57,11 @@ function displayCode(filePath, code){
     let solutionSection=document.querySelector(".solution-container");
 
     solutionCard.classList.add("solution-card");
-    if (currMode === "dark") {
+    if(currMode === "dark"){
         solutionCard.classList.add("dark-theme");
-    } else {
+    }else{
         solutionCard.classList.add("light-theme");
     }
-
     let selectedLanguage=languageSelect.value;
     let languageMap={
         ".cpp":"cpp",
