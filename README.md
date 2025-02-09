@@ -13,6 +13,6 @@ Features:<br>
 
 <br>
 I used ChatGPT for help in certain parts of this project, including:<br>
-1)Fixing syntax highlighting issues in code blocks<br>
+1)Fixing syntax highlighting issues in code blocks(highlight.js)<br>
 2)Implementing search history functionality<br>
 
