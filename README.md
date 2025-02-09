@@ -10,3 +10,9 @@ Features:<br>
 4) Responsive Design: Works well on all screen sizes.<br>
 5) Scrollable Code Blocks: Large solutions stay compact with internal scrolling.<br>
 6) Copy Button: Copy code with one click.<br>
+
+<br>
+I used ChatGPT for help in certain parts of this project, including:<br>
+1)Fixing syntax highlighting issues in code blocks<br>
+2)Implementing search history functionality<br>
+
