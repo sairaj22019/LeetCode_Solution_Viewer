@@ -1,26 +1,38 @@
 const URL = "https://api.github.com/repos/haoel/leetcode/git/trees/master?recursive=1";
 
-// token generation for more requests
-
 let searchInfo=document.getElementById("search-text");
 let button=document.getElementById("search-button");
 let languageSelect=document.getElementById("select-language");
 const languageToggleBtn = document.getElementById("language-toggle-btn");
 
+const token="";
 
 document.querySelector(".solution-container-features").style.display="none";
 
-async function find_path(problem_name){
-    const response=await fetch(URL);
-    const data=await response.json();
+async function find_path(problem_name) {
+    const response=await fetch(URL); 
+
+    // uncomment the below lines of code form line 16 to 21 and comment line 13 before using token in line number 8.
+    // const response=await fetch(URL,{
+    //     method:'GET',
+    //     headers:{
+    //         'Authorization': `token ${token}`
+    //     }
+    // }); 
+
     
+
+    const data = await response.json();
+
     if (!data||!data.tree){
         console.error("Invalid response structure:", data);
         document.querySelector(".solution").innerHTML= "<p>No valid data returned from API.</p>";
         return;
     }
+    
     // removing all spaces,underscores and hypens from entered input 
     const formattedProblemName=problem_name.toLowerCase().replace(/[\s-_]+/g, "");
+    
     const matchingFiles=data.tree.filter(file =>{
         const fileName=file.path.toLowerCase();
         return fileName.includes(formattedProblemName);
@@ -41,8 +53,9 @@ async function find_path(problem_name){
         matchingFiles.forEach(file => fetchSolutionCode(file.path));
     }
 }
+
 // function to fetch filepath
-async function fetchSolutionCode(filePath){
+async function fetchSolutionCode(filePath) {
     const filePathUrl= `https://raw.githubusercontent.com/haoel/leetcode/master/${filePath}`;
     const response= await fetch(filePathUrl);  
     const code=await response.text();
@@ -57,11 +70,12 @@ function displayCode(filePath, code){
     let solutionSection=document.querySelector(".solution-container");
 
     solutionCard.classList.add("solution-card");
-    if(currMode === "dark"){
+    if (currMode === "dark") {
         solutionCard.classList.add("dark-theme");
-    }else{
+    } else {
         solutionCard.classList.add("light-theme");
     }
+
     let selectedLanguage=languageSelect.value;
     let languageMap={
         ".cpp":"cpp",
@@ -265,6 +279,11 @@ function displaySearchHistory(){
         searchHistoryContainer.appendChild(clearBtn);
     }
 }
+
+
+
+
+
 
 
 
